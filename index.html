@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href= "css.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <script type = "text/javascript" src ="javascript.js"></script>
+</head>
+<body>
+    <div class="nav-bar" id="desktop">
+        <img src="Design/skanstes-transperent.png" alt="">
+        <div class="dummyClass"></div>
+        <ul>
+            <a href="#scroll"><li>Par mums</li></a>
+            <a href="#scroll1"><li>Vēsture</li></a>
+            <a href="#"><li>Komanda</li></a>
+            <a href="#scrollcontacts"><li>Kontakti</li></a>
+
+        </ul>
+    </div>
+    <header>
+        <input type='checkbox' id='toggle' style='display:none;' />
+        <label class='toggle-btn toggle-btn__cross' for='toggle'>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </label>
+        <nav>
+          <ul>
+            <li><a id="selector" onclick="load3()" href="#scroll">Par mums</a></li>
+            <li><a id="selector" onclick="load3()" href="#scroll1">Vēsture</a></li>
+            <li><a id="selector" onclick="load3()" href="#">Komanda</a></li>
+            <li><a id="selector" onclick="load3()" href="#scrollcontacts">Kontakti</a></li>
+          </ul>
+        </nav>
+    </header>
+    <section>
+        <img id="logo" src="Design/skanstes-transperent.png" alt="">
+        <div class="container reveal" id="loaded">
+            <div class="wordCarousel">
+                <span>Mēs esam </span>
+                <div>
+                    <ul class="flip3">
+                        <li id="special"><div>Skanstes SK</div></li>
+                        <li>Spēks</li>
+                        <li>Ātrums</li>
+                    </ul>
+                </div>
+            </div>
+                <svg class="arrows" id="loaded1">
+                    <a href="#scroll">
+                        <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                        <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                        <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                    </a>
+                </svg>
+        </div>
+    </section>
+    <section id="scroll">
+        <div class="container reveal">
+            <div class="content">
+                <div class="text">
+                    <img src="Design/skanstes-transperent.png" alt="">
+                    <br>
+                    <p>Skanstes Sporta Klubs</p>
+                    <br>
+                    <p>Skanstes SK ir Latvijas futbola klubs, kas atrodas Rīgas centrā. Klubs ir dibināts 2021. gadā ar mērķi attīstīt Latvijas futbolu, veidojot piedalīšanās iespējas futbolistiem visos vecumos un attīstības līmeņos.
+                    <br>
+                    <br>
+                    Skanstes SK ir projekts, kas apvieno Skanstes kopienu un palīdz katram atrast sevi futbolā, jo FUTBOLS - IR VISIEM!</p>
+                    <br>
+                    <p>Svarīgākie notikumi:</p>
+                    <br>
+                    <div>
+                        <p>Kluba dibināšana - 2021</p>
+                        <p>Latvijas 2. līgas čempions - 2021 </p>
+                    </div>
+                </div>
+                <img src="Design/IMGL0774.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="scroll1">
+        <div class="container reveal">
+            <div class="choice">
+                <p class="underline" onclick="reply_click(this.id)" id="1">Missija</p>
+                <p onclick="reply_click(this.id)" id="2">Vērtības</p>
+                <p onclick="reply_click(this.id)" id="3">Simbols</p>
+            </div>
+            <div class="choiceDisplay">
+                <div class="choiceText mid active" id="t1">Mūsu missija ir palīdzēt attīstīties Latvijas futbolam veidojot jaunās piedalīšanās iespējas visiem cilvēkiem, kas ir ieinteresēti un iesaistīti futbolā: spēlētāji, treneri, atbalstītāji, menedžeri. 
+                    Mērķis ir nodrošināt draudzīgu un patīkamu vidi kur katram ir iespēja iesaistīties un baudīt futbolu.
+                </div>
+                <div class="choiceText" id="t2">
+                    <div class="gridView">
+                        <div class="gridViewElements">
+                            <div>Vēsture</div>
+                        </div>
+                        <div class="gridViewElements">
+                            <div>Identitāte</div>
+                            <img id="hide1" src="Design/skanstes-transperent.png" alt="">
+                            <div>Pieejamība</div>
+                        </div>
+                        <div class="gridViewElements">
+                            <div>Kopiena</div>
+                            <div>Vienotība</div>
+                        </div>
+                        <img id="hide2" src="Design/skanstes-transperent.png" alt="">
+
+                    </div>
+                </div>
+                <div class="choiceText" id="t3">Zirgi Skanstes apkaimei ir vēsturiskie dzīvnieki, jau 13. gadsimtā pirmajos vēstures avotos tika pieminēti Skanstes vietas, kur kādreiz ganījušies staltie zirgi. 
+                    Vēlāk no zirgu ganībām Skanste kļuva par vietu diviem hipodromiem. 
+                    Mūsdienās Skanstes piepilsētas lauki ir ieņēmuši konkrētāku formu in pārtāpuši par futbola laukumiem. 
+                    Mēs, Skanstes SK, cienam mūsu vēsturi un turpinam tradīcijas, mums ir prieks simbolizēties ar zirgiem kā ar dzīvniekiem, kas simbolizē dinamiku un kustību. Mūsu klubam kā arī simbolam piemīt drosme, izturība, spēks un neatlaidība.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container reveal">
+            <div class="contactHeader" id="scrollcontacts">Contacts</div>
+            <div class="gridLook">
+                <div id="girdtext">
+                    <div id="contactInfo">Skanstes Sporta Klubs bāzējas Rīgas centrā, mūsu sporta māja ir Rīgas Hanzas Vidusskolas laukums:
+                        Grostonas iela 5, Vidzemes priekšpilsēta, Rīga, LV-1013, Lativja
+                    </div>
+                    <div id="contactInfo">Mūsu birojs atrodas Rimi Olimpiskajā sporta centrā:
+                        Grostonas iela 6B, Vidzemes priekšpilsēta, Rīga, LV-1013, Lativja
+                    </div>
+                </div>
+                <div id="gridPictures">
+                    <img id="stadion" src="Design/2016-06-15_hansas_vsk_laukums.png" alt="">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.374440484539!2d24.12353838531657!3d56.9679038941362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfb70f2c3391%3A0x31f6b819a0fc768f!2zR3Jvc3RvbmFzIGllbGEgNmIsIFZpZHplbWVzIHByaWVrxaFwaWxzxJN0YSwgUsSrZ2EsIExWLTEwMTMsINCb0LDRgtCy0LjRjw!5e1!3m2!1sru!2sfi!4v1647837043487!5m2!1sru!2sfi" width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div id="gridLogo">
+                    <div class="lineup">
+                        <img id="finalLogo" src="Design/skanstes-transperent.png" alt="">
+                        <p>SKANSTES SK</p>
+                        <br>
+                        <div id="instalieup">
+                            <img id="insta" src="Design/1491580635-yumminkysocialmedia26_83102.png" alt="">
+                            <p>@skanstessk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gridLookMobile">
+                <div id="contactInfo">Skanstes Sporta Klubs bāzējas Rīgas centrā, mūsu sporta māja ir Rīgas Hanzas Vidusskolas laukums:
+                    Grostonas iela 5, Vidzemes priekšpilsēta, Rīga, LV-1013, Lativja
+                </div>
+                <img id="stadion" src="Design/2016-06-15_hansas_vsk_laukums.png" alt="">
+                <div id="contactInfo">Mūsu birojs atrodas Rimi Olimpiskajā sporta centrā:
+                    Grostonas iela 6B, Vidzemes priekšpilsēta, Rīga, LV-1013, Lativja
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.374440484539!2d24.12353838531657!3d56.9679038941362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfb70f2c3391%3A0x31f6b819a0fc768f!2zR3Jvc3RvbmFzIGllbGEgNmIsIFZpZHplbWVzIHByaWVrxaFwaWxzxJN0YSwgUsSrZ2EsIExWLTEwMTMsINCb0LDRgtCy0LjRjw!5e1!3m2!1sru!2sfi!4v1647837043487!5m2!1sru!2sfi" width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div id="gridLogo">
+                    <div class="lineup">
+                        <img id="finalLogo" src="Design/skanstes-transperent.png" alt="">
+                        <p>SKANSTES SK</p>
+                        <br>
+                        <div id="instalieup">
+                            <img id="insta" src="Design/1491580635-yumminkysocialmedia26_83102.png" alt="">
+                            <p>@skanstessk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="end"> © 2022 Page by OxCone </div>
+    <script>
+        window.onload = load1()
+        window.onload = load()
+    </script>
+</body>
+</html>
