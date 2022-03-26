@@ -66,4 +66,3 @@ function reply_click(clicked_id){
 }
 window.addEventListener("click", load2)
 window.addEventListener("scroll", reveal);
-  
