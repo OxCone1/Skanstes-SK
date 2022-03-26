@@ -86,7 +86,7 @@ section:nth-child(5){
   align-items: flex-start;
 }
 section:nth-child(6){
-  background: #e0ffff;
+  background: var(--1);
 }
 section .container{
   margin: 100px;
