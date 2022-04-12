@@ -64,5 +64,15 @@ function reply_click(clicked_id){
   var toAddSelector = document.getElementById(clicked_id)
   toAddSelector.className = "underline"
 }
+$(document).ready(function(){
+  function displayLogo(){
+    sleep(5650).then(() => {
+      $(".base").addClass("active")
+      $(".toAppear").addClass("active")
+    })
+  }
+  displayLogo()
+})
+
 window.addEventListener("click", load2)
 window.addEventListener("scroll", reveal);
