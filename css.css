@@ -402,7 +402,7 @@ section:nth-child(8){
 
 .choiceText.mid{
   color: rgba(0, 0, 0, 0.76);
-  text-shadow: .5px .5px var(--3);
+  text-shadow: .5px .5px 2px var(--3);
   display: flex ;
   transform: translateY(150px);
   transition: 1s all ease;
