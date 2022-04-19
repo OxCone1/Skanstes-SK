@@ -22,7 +22,7 @@
             <a href="#scroll"><li>Par mums</li></a>
             <a href="#scroll1"><li>Vēsture</li></a>
             <a href="#scrollcontacts"><li>Kontakti</li></a>
-            <a href=""><li>Pievienojies</li></a>
+            <a href="mailto:skanstessk@skanstes.lv"><li>Pievienojies</li></a>
 
         </ul>
     </div>
@@ -39,6 +39,7 @@
             <li><a id="selector" onclick="load3()" href="#scroll1">Vēsture</a></li>
             <li><a id="selector" onclick="load3()" href="#">Komanda</a></li>
             <li><a id="selector" onclick="load3()" href="#scrollcontacts">Kontakti</a></li>
+            <li><a id="selector" onclick="load3()" href="mailto:skanstessk@skanstes.lv">Pievienojies</a></li>
           </ul>
         </nav>
     </header>
@@ -86,9 +87,18 @@
     <section id="scroll1">
         <div class="container reveal">
             <div class="choice">
-                <p class="underline" onclick="reply_click(this.id)" id="1">Missija</p>
-                <p onclick="reply_click(this.id)" id="2">Vērtības</p>
-                <p onclick="reply_click(this.id)" id="3">Simbols</p>
+                <div class="underlineElementContainer">
+                    <p onclick="reply_click(this.id)" id="1">Missija</p>
+                    <span class="underlineElement"></span>
+                </div>
+                <div class="underlineElementContainer">
+                    <p onclick="reply_click(this.id)" id="2">Vērtības</p>
+                    <span class="underlineElement"></span>
+                </div>
+                <div class="underlineElementContainer">
+                    <p onclick="reply_click(this.id)" id="3">Simbols</p>
+                    <span class="underlineElement"></span>
+                </div>
             </div>
             <div class="choiceDisplay">
                 <div class="choiceText mid active" id="t1">Mūsu missija ir palīdzēt attīstīties Latvijas futbolam veidojot jaunās piedalīšanās iespējas visiem cilvēkiem, kas ir ieinteresēti un iesaistīti futbolā: spēlētāji, treneri, atbalstītāji, menedžeri. 
@@ -120,61 +130,108 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="scrollcontacts">
         <div class="container reveal">
-            <div class="contactHeader" id="scrollcontacts">Contacts</div>
-            <div class="gridLook">
-                <div id="girdtext">
-                    <div id="contactInfo">Skanstes Sporta Klubs bāzējas Rīgas centrā, mūsu sporta māja ir Rīgas Hanzas Vidusskolas laukums:
-                        Grostonas iela 5, Vidzemes priekšpilsēta, Rīga, LV-1013, Lativja
-                    </div>
-                    <div id="contactInfo">Mūsu birojs atrodas Rimi Olimpiskajā sporta centrā:
-                        Grostonas iela 6B, Vidzemes priekšpilsēta, Rīga, LV-1013, Lativja
-                    </div>
-                </div>
-                <div id="gridPictures">
-                    <img id="stadion" src="Design/2016-06-15_hansas_vsk_laukums.png" alt="">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.374440484539!2d24.12353838531657!3d56.9679038941362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfb70f2c3391%3A0x31f6b819a0fc768f!2zR3Jvc3RvbmFzIGllbGEgNmIsIFZpZHplbWVzIHByaWVrxaFwaWxzxJN0YSwgUsSrZ2EsIExWLTEwMTMsINCb0LDRgtCy0LjRjw!5e1!3m2!1sru!2sfi!4v1647837043487!5m2!1sru!2sfi" width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-                <div id="gridLogo">
-                    <div class="lineup">
-                        <img id="finalLogo" src="Design/skanstes-transperent.png" alt="">
-                        <p>SKANSTES SK</p>
-                        <br>
-                        <div id="instalieup">
-                            <img id="insta" src="Design/1491580635-yumminkysocialmedia26_83102.png" alt="">
-                            <a href="https://www.instagram.com/skanstessk/"><p>@skanstessk</p></a>
+            <div class="contacts">
+                <div class="contactHolder">
+                    <div class="contactsGrid">
+                        <span></span>
+                        <div class="contactLogo">
+                            <img src="Design/skanstes-transperent.png" alt="">
                         </div>
+                        <h2>Stadions</h2>
+                        <span></span>
+                        <p class="placeDescription">Grostonas iela 5, Vidzemes priekšpilsēta, Rīga, LV-1013, Lativja</p>
+                        <span></span>
+                        <h2>Birojs</h2>
+                        <span></span>
+                        <p class="placeDescription">Grostonas iela 6B, Vidzemes priekšpilsēta, Rīga, LV-1013, Lativja</p>
+                        <span></span>
+                        <h4>E-pasts: <a href="mailto:skanstessk@skanstes.lv">skanstessk@skanstes.lv</a></h4>
+                        <span></span>
+                        <h4>Tālrunis: <a href="tel:+37129123123">+37129123123</a></h4>
                     </div>
+                    <div class="contactButtonHolder">
+                        <a href="mailto:skanstessk@skanstes.lv">
+                            <button class="contactButton">Sazināties</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="pictureHolder">
+                    <img id="stadion" src="Design/2016-06-15_hansas_vsk_laukums.png" alt="">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2174.8860457295664!2d24.12342482060306!3d56.96788444758195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfb70f2c3391%3A0x31f6b819a0fc768f!2sGrostonas%20iela%206b%2C%20Vidzemes%20priek%C5%A1pils%C4%93ta%2C%20R%C4%ABga%2C%20LV-1013%2C%20Latvia!5e0!3m2!1sen!2sfi!4v1650327639806!5m2!1sen!2sfi" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
+
+
+
+
             <div class="gridLookMobile">
-                <div id="contactInfo">Skanstes Sporta Klubs bāzējas Rīgas centrā, mūsu sporta māja ir Rīgas Hanzas Vidusskolas laukums:
-                    Grostonas iela 5, Vidzemes priekšpilsēta, Rīga, LV-1013, Lativja
+                <div id="contactInfo">Stadions:<br>
+                    <span>Grostonas iela 5, Vidzemes priekšpilsēta, Rīga, LV-1013, Lativja</span>
                 </div>
                 <img id="stadion" src="Design/2016-06-15_hansas_vsk_laukums.png" alt="">
-                <div id="contactInfo">Mūsu birojs atrodas Rimi Olimpiskajā sporta centrā:
-                    Grostonas iela 6B, Vidzemes priekšpilsēta, Rīga, LV-1013, Lativja
+                <div id="contactInfo">Birojs:<br>
+                    <span>Grostonas iela 6B, Vidzemes priekšpilsēta, Rīga, LV-1013, Lativja</span>
+                     <br>
+                    <h4>E-pasts: <a href="mailto:skanstessk@skanstes.lv">skanstessk@skanstes.lv</a></h4>
+                    <h4>Tālrunis: <a href="tel:+37129123123">+37129123123</a></h4>
                 </div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2174.888094300813!2d24.124315313996036!3d56.96784935725195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfb70f2c3391%3A0x31f6b819a0fc768f!2sGrostonas%20iela%206b%2C%20Vidzemes%20priek%C5%A1pils%C4%93ta%2C%20R%C4%ABga%2C%20LV-1013%2C%20Latvia!5e0!3m2!1sen!2sfi!4v1647856669106!5m2!1sen!2sfi" width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <div id="gridLogo">
-                    <div class="lineup">
-                        <img id="finalLogo" src="Design/skanstes-transperent.png" alt="">
-                        <p>SKANSTES SK</p>
-                        <br>
-                        <div id="instalieup">
-                            <img id="insta" src="Design/1491580635-yumminkysocialmedia26_83102.png" alt="">
-                            <a href="https://www.instagram.com/skanstessk/"><p>@skanstessk</p></a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
-    <div class="end"> © 2022 Page by OxCone </div>
+    <div class="footer" id="footerHolder">
+        <div class="footerContent">
+            <div class="logoandtext">
+                <img id="logoSk" src="Design/skanstes-transperent.png" alt="">
+                <p>Skanstes SK</p>
+                <img id="sportland" src="Design/sportland.png" alt="">
+            </div>
+            <div class="end">
+                <p>© 2022 Page by OxCone</p>
+            </div>
+            <div class="instagramContainer">
+                <div class="temp">
+                    <a href="https://www.instagram.com/skanstessk/"><img id="instagram" src="Design/icons8-instagram-192.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footerPhone" id="footerHolder">
+        <div class="footerContent">
+            <div class="instagramContainer">
+                <div class="temp">
+                    <a href="https://www.instagram.com/skanstessk/"><img id="instagram" src="Design/icons8-instagram-192.png" alt=""></a>
+                </div>
+            </div>
+            <div class="logoandtext">
+                <img id="logoSk" src="Design/skanstes-transperent.png" alt="">
+                <p>Skanstes SK</p>
+                <img id="sportland" src="Design/sportland.png" alt="">
+            </div>
+            <div class="end">
+                <p>© 2022 Page by OxCone</p>
+            </div>
+            
+        </div>
+    </div>
     <script>
         window.onload = load1()
         window.onload = load()
     </script>
 </body>
 </html>
+
+
+<!-- <div id="gridLogo">
+                    <div class="lineup">
+                        <img id="finalLogo" src="Design/skanstes-transperent.png" alt="">
+                        <p>SKANSTES SK</p>
+                        <br>
+                        <div id="instalieup">
+                            <img id="insta" src="Design/1491580635-yumminkysocialmedia26_83102.png" alt="">
+                            <a href="https://www.instagram.com/skanstessk/"><p>@skanstessk</p></a>
+                        </div>
+                    </div>
+                </div> -->

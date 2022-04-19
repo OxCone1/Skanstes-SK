@@ -43,26 +43,29 @@ function load2() {
     elem.forEach(element => {
       element.style.display = "none"
     });
+    $("#footerHolder").next().css("display", "none")
   }
   else{
     var elem = document.querySelectorAll("section")
     elem.forEach((element, index) => {
         element.style.display = "flex"
     });
+    $("#footerHolder").next().css("display", "flex")
   }
 }
 function reply_click(clicked_id){
-  var toRevokeSelector = document.querySelector(".underline")
-  toRevokeSelector.className = ""
+  var toRevokeSelector = document.querySelector(".checked")
+  toRevokeSelector.classList.remove("checked")
   var toRevoke = document.querySelector(".choiceText.mid.active")
   toRevoke.classList.remove("active")
   toRevoke.classList.remove("mid")
   var toAddText = document.getElementById("t"+clicked_id)
   toAddText.classList.add("mid")
   sleep(50).then(() => {
-    toAddText.classList.add("active") })
-  var toAddSelector = document.getElementById(clicked_id)
-  toAddSelector.className = "underline"
+    toAddText.classList.add("active") 
+  })
+  var toAddSelector = $("#"+clicked_id).parent().find(".underlineElement")
+  $(toAddSelector).toggleClass("checked")
 }
 $(document).ready(function(){
   function displayLogo(){
@@ -71,6 +74,10 @@ $(document).ready(function(){
       $(".toAppear").addClass("active")
     })
   }
+  function applyChecked(){
+    $(".underlineElement:first").toggleClass("checked")
+  }
+  applyChecked()
   displayLogo()
 })
 

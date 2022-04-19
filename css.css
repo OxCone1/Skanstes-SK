@@ -69,6 +69,12 @@ header{
     padding: 0.5vh 4vh;
     border: #fff solid 1.3px;
     border-radius: 35px;
+    transition: .5s;
+  }
+  ul a:last-child:hover{
+    background-color: #fff;
+    color: #000;
+    box-shadow: var(--4) 3px 3px 2px;
   }
   .nav-bar img{
     filter: invert(100%);
@@ -98,7 +104,7 @@ section img#logo{
   height: 190px;
 }
 section:nth-child(3){
-  background-image: url(Design/IMGL0094.png);
+  background-image: url(Design/IMGL0094-edit.png);
   background-position: 0% 20%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -109,17 +115,27 @@ section:nth-child(4){
   background: black
 } 
 section:nth-child(5){
-  background-color: var(--2);
+  background-color: white;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: flex-start;
 }
-section:nth-child(6){
-  background: var(--1);
-}
 section .container{
   margin: 100px;
+}
+section:nth-child(6){
+  min-height: 100vh;
+  background: #656565;
+}
+section:nth-child(7){
+  min-height: 1vh;
+}
+section:nth-child(8){
+  min-height: 1vh;
+}
+#scrollcontacts .container.active.reveal{
+  margin-bottom: 20px;
 }
 .wordCarousel{
   display: flex;
@@ -135,6 +151,7 @@ section .container{
   transform: scale(3);
   font-size: 30px;
   font-weight: 600;
+  text-shadow: 1px 1px var(--3)
 }
 .wordCarousel div{
   overflow: hidden;
@@ -145,7 +162,7 @@ section .container{
   margin-top: -10px;
 }
 .wordCarousel span{
-  text-shadow: 2px 2px var(--3);
+  text-shadow: 1px 1px var(--3);
 }
 .wordCarousel div li {
   font-weight: 700;
@@ -158,9 +175,9 @@ section .container{
   /* text-shadow: 1.5px 1.5px black; */
 }
 .wordCarousel div #special{
-  /* color: #dd3737; */
-  /* text-shadow: 0.05px 0.05px 0.5px var(--1); */
-  font-size: 45px;
+  text-shadow: 1.2px 1.2px 5px var(--3);
+  /* text-shadow: 0px 0px transparent; */
+  font-size: 40px;
   color: black;
 }
 .toAppear{
@@ -261,7 +278,7 @@ section .container{
   display: block;
   position: static;
   overflow: hidden;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   width: 60%;
   z-index: 1;
 }
@@ -345,7 +362,7 @@ section .container{
   margin: 0px;
 }
 .container.reveal .choice{
-  font-size: 50px;
+  font-size: 5vh;
   font-weight: 700;
   width: 100%;
   height: 100%;
@@ -354,6 +371,26 @@ section .container{
   justify-content: space-around;
   margin-bottom: 5%;
   flex-wrap: wrap;
+  user-select: none;
+}
+.underlineElementContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.underlineElement{
+  background-color: black;
+  height: 6px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease-out;
+}
+.checked{
+  transform: scaleX(1);
+}
+.underlineElementContainer:hover .underlineElement{
+  transform: scaleX(1);
 }
 .choiceText{
   display: none ;
@@ -370,8 +407,8 @@ section .container{
   transform: translateY(150px);
   transition: 1s all ease;
   opacity: 0;
-  font-size: 32px;
-  font-weight: 500;
+  font-size: 35px;
+  font-weight: 400;
   text-align: center;
   justify-content: center;
 }
@@ -379,28 +416,21 @@ section .container{
   transition: 1s all ease;
   transform: translateY(0);
   opacity: 1;
-  font-weight: 600;
+  font-weight: 400;
   display: flex;
-  font-size: 32px;
+  font-size: 35px;
   text-align: center;
   justify-content: center;
 }
 .choiceText:nth-child(1){
-  font-size: 36px;
+  font-size: 35px;
   margin: 5% 10%;
   text-align: center;
 }
 .choiceText:nth-child(3){
+  font-size: 35px;
   margin: 5% 5%;
 }
-.underline{
-  color: var(--1);
-  transition: 0.5s all ease;
-  text-shadow: 4px 4px 2px var(--4);
-  border-bottom: #dd3737 solid 5px;
-  transform: scaleX(1);
-}
-
 .gridView{
   width: 100%;
   height: 100%;
@@ -409,8 +439,9 @@ section .container{
   display: flex;
   width: 100%;
   font-size: 3.5rem;
-  color: var(--1);
-  text-shadow: 5px 5px var(--3);
+  font-weight: 300;
+  color: black;
+  text-shadow: 1px 1px var(--3);
 }
 .gridViewElements div{
   margin: 1%;
@@ -425,7 +456,7 @@ section .container{
 .gridViewElements:nth-child(1){
   display: flex;
   width: 100%;
-  margin-left: -10px;
+  margin-left: -16px;
   justify-content: space-evenly;
 }
 
@@ -439,6 +470,115 @@ section .container{
   width: 100%;
   justify-content: space-evenly;
 }
+
+
+.contacts{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contactHolder{
+ background-color: #c4c4c4;
+  width: 37%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  justify-content: flex-start;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.pictureHolder{
+  display: flex;
+  width: 45%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.contactsGrid{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.contactLogo{
+  display: flex;
+  justify-content: center;
+}
+.contactLogo img{
+  height: 15vh;
+  filter: grayscale(100%);
+}
+.contactsGrid h2{
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+  text-shadow: 1px 1px var(--3);
+  margin-bottom: 20px;
+  margin-top: 35px;
+}
+.placeDescription{
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+.contactsGrid h4{
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: black;
+  margin-top: 20px;
+}
+.contactsGrid a{
+  text-decoration: none;
+  color: black;
+  text-shadow: .05px .05px var(--3);
+}
+.contactButtonHolder{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+}
+.contactButtonHolder a{
+  text-decoration: none;
+}
+.contactButton:hover{
+  transition: .5s;
+  box-shadow: var(--4) 1px 1px 5px;
+}
+.contactButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: 500;
+  border-radius: 35px;
+  padding: 15px 75px;
+  font-size: 1.35rem;
+}
+#contactInfo h4{
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--1);;
+  margin-top: 5%;
+  text-decoration: none;
+}
+#contactInfo a{
+  color: var(--1);
+  text-shadow: 1.3px 1.3px black;
+  text-decoration: none;
+}
+#contactInfo span{
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
 .contactHeader{
   margin-left: 13%;
   font-size: 30px;
@@ -447,13 +587,13 @@ section .container{
 .gridLook{
   display: grid;
   column-gap: 6px;
-  grid-template-columns: 1.5fr 2fr 1fr;
+  grid-template-columns: 1.5fr 2fr;
 }
 #contactInfo{
   font-weight: 600;
   margin-left: 5%;
   margin-right: 5%;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-shadow: 1.1px 1.1px var(--3);
 }
 #girdtext {
@@ -464,12 +604,10 @@ section .container{
 }
 img#stadion{
   width: 100%;
-  box-shadow:4px 4px 1px var(--4);
   margin-bottom: 1%;
 }
 iframe{
   width: 100%;
-  box-shadow:4px 4px 1px var(--4) ;
 }
 #gridLogo{
   display: flex;
@@ -506,15 +644,78 @@ iframe{
 #gridLogo a{
   text-decoration: none;
 }
-
+.footer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 10vh;
+}
+.logoandtext{
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 100%;
+  color: white;
+  font-size: 2.5vh;
+  align-items: center;
+}
+.logoandtext #logoSk{
+  filter: invert(100%);
+  width: 15%;
+  margin-right: 20px;
+}
+#instagram{
+  width: 5vh;
+  filter: invert(100%);
+  margin-right: 100%;
+}
+.temp{
+  display: flex;
+  align-items: center;
+}
+.logoandtext #sportland{
+  width: 40%;
+  margin-left: 40px;
+}
+.footerContent{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+}
+.instagramContainer{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+.instagramContainer a{
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 .end{
-  background-color: var(--3);
+  display: flex;
+  background-color: black;
+  height: 100%;
   color: var(--1);
   font-size: 0.8rem;
   font-weight: 300;
   text-align: center;
-  text-shadow: .3px .3px var(--4);
+  text-shadow: .3px .3px var(--3);
+  align-items: flex-end;
+  justify-content: center;
 }
+.footerPhone{
+  display: none;
+}
+
 @keyframes arrow{
   0% {opacity:0}
   40% {opacity:1}
@@ -557,6 +758,18 @@ iframe{
   99.99% { margin-top: 0px; }
   100% { margin-top: -270px; }
 }
+@media (max-width: 1450px) {
+  .contactsGrid{
+    grid-template-columns: 2fr;
+  }
+  #stadion{
+    width: 80%;
+  }
+  iframe{
+    margin-top: 5%;
+    width: 80%;
+  }
+}
 @media (max-width: 1290px){
   .gridLook{
     transform: scale(0.9);
@@ -581,6 +794,24 @@ iframe{
   }
 }
 @media (max-width: 1100px){
+  nav li a#selector{
+    border: 0;
+    font-size: 1.75em;
+  }
+  section:nth-child(6) {
+    min-height: 80vh;
+    background: #656565;
+  }
+  .arrows{
+    top: 200%;
+  }
+  section img#logo{
+    top: -5%;
+    left: -3%;
+    margin-left: 1%;
+    margin-top: 1%;
+    transform: scale(0.5);
+  }
   .content .text img{
     width: 25%;
   }
@@ -642,7 +873,7 @@ iframe{
     position: fixed;
     z-index: 10;
     right: 5%;
-    top: 3%;
+    top: 5%;
     cursor: pointer;
     transform: scale(2.5);
   }
@@ -693,12 +924,16 @@ iframe{
   #toggle:checked + label.toggle-btn .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-
-
-
+  .contacts{
+    display: none;
+  }
+  #scrollcontacts .container.active.reveal{
+    margin-top: 0;
+  }
   .gridLookMobile{
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .gridLook{
     display: none;
@@ -716,12 +951,12 @@ iframe{
     margin-right: 5%;
     margin-top: 5%;
     margin-bottom: 5%;
-    font-size: 1rem;
+    font-size: 1.35rem;
+    text-shadow: 1.2px 1.2px var(--3);
   }
   img#stadion{
     width: 100%;
     transform: scale(0.9);
-    box-shadow:4px 4px 2px var(--4) ;
   }
   .lineup{
     text-shadow: 1.2px 1.2px var(--1);
@@ -743,16 +978,66 @@ iframe{
   iframe{
     width: 100%;
     transform: scale(0.9);
-    box-shadow:4px 4px 2px var(--4) ;
   }
   #instalieup {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-}
+  }
+  .footer{
+    display: none;
+  }
+  .footerPhone{
+    display: flex;
+    flex-direction: column;
+  }
+  .footerContent {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .logoandtext{
+    height: 20%;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  .instagramContainer {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .logoandtext #sportland{
+    width: 20%;
+  }
+  .logoandtext #logoSk{
+    width: 5%;
+  }
+  #instagram{
+    margin-right: 0;
+  }
+  #contactInfo{
+    margin-bottom: 1%;
+  }
+  iframe{
+    margin-top: 0;
+  }
 }
 @media (max-width: 900px){
+  img#stadion{
+    transform: 0;
+    width: 70%;
+  }
+  .toAppear.active{
+    height: 15vh;
+  }
   .choice p{
     margin: 2%;
   }
@@ -787,8 +1072,17 @@ iframe{
   .arrows.arrows.active{
     transform: scale(0.8);
   }
+  .content .text {
+    padding: 2% 25% 10% 12%;
+  }
 }
 @media (max-width: 700px){
+  .choiceText.mid.active#t1 {
+    font-size: 27px;
+}
+  .arrows{
+    top: 150%;
+  }
   .choiceText.mid.active{
     font-size: 20px;
   }
@@ -825,28 +1119,92 @@ iframe{
     display: flex;
     width: 40%;
   }
+  .logoandtext #sportland{
+    width: 30%;
+  }
+  .logoandtext #logoSk{
+    width: 9%;
+  }
+  .toAppear.active {
+    height: 20vh;
 }
-@media (max-width: 330px){
+}
+@media (max-width: 500px){
+  .content div{
+    font-size: 5rem;
+    letter-spacing: normal;
+  }
+  .choiceText.mid.active#t1 {
+    font-size: 23px;
+}
+  section img#logo{
+    transform: scale(0.345);
+    left: -10%;
+  }
   .wordCarousel{
     transform: scale(1.4);
   }
+  .wordCarousel div #special {
+    font-size: 27px;
+}
+  .content .text {
+    padding: 2% 10% 10% 12%;
+  }
+  .logoandtext #sportland{
+    width: 36%;
+  }
+  .logoandtext #logoSk{
+    width: 14%;
+  }
+}
+@media (max-width: 330px){
+  .choiceText.mid.active#t1 {
+    font-size: 20px;
+}
+  section img#logo{
+    transform: scale(0.345);
+    margin-left: 10px;
+    left: -16%;
+  }
+  .arrows{
+    top: 150%;
+  }
+  section img#logo{
+    position: absolute;
+  }
+  .wordCarousel{
+    transform: scale(1.4);
+  }
+  .wordCarousel div #special{
+    font-size: 33px;
+  }
+  .toAppear.active{
+    height: 22vh;
+  }
+  .content div{
+    letter-spacing: 0;
+  }
+  .content .text{
+    padding: 10px 20px 10px 20px;
+  }
   .choiceText{
-    font-size: 26px;
+    font-size: 1.2rem;
   }
   .choiceText.mid{
-    font-size: 26px;
+    font-size: 1.2rem;
   }
   .choiceText.mid.active{
-    font-size: 26px;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px var(--3);
   }
   .gridViewElements{
     display: flex;
     width: 100%;
-    font-size: 2.9rem;
+    font-size: 2rem;
     color: var(--1);
-    text-shadow: 5px 5px var(--3);
+    text-shadow: 1.5px 1.5px var(--3);
   }
-}
-@media (max-width: 500px){
-
+  .container.reveal .choice{
+    font-size: 2rem;
+  }
 }
