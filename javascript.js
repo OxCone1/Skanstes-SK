@@ -43,14 +43,14 @@ function load2() {
     elem.forEach(element => {
       element.style.display = "none"
     });
-    $("#footerHolder").next().css("display", "none")
+    $(".footerPhone").css("display", "none")
   }
   else{
     var elem = document.querySelectorAll("section")
     elem.forEach((element, index) => {
         element.style.display = "flex"
     });
-    $("#footerHolder").next().css("display", "flex")
+    $(".footerPhone").css("display", "flex")
   }
 }
 function reply_click(clicked_id){
@@ -81,5 +81,5 @@ $(document).ready(function(){
   displayLogo()
 })
 
-window.addEventListener("click", load2)
+// window.addEventListener("click", load2)
 window.addEventListener("scroll", reveal);
