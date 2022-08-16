@@ -1162,13 +1162,13 @@ iframe{
     position: absolute;
     flex-direction: column;
     align-items: center;
-    transform: translateY(90%);
+    top: 47%;
     z-index: 2;
     padding-left: 5vw;
     padding-right: 5vw;
   }
   .contactDataTablet h1{
-    font-size: calc(2rem + 3vw);
+    font-size: calc(2rem + 1.5vw);
     font-weight: 700;
     color: white;
     margin-bottom: 5%;
@@ -1183,14 +1183,14 @@ iframe{
     gap: 5%;
   }
   .contactDataTablet .place{
-    font-size: 2.3rem;
+    font-size: calc(1rem + 1.5vh);
     font-weight: 500;
     color: black;
     margin-bottom: 5%;
     text-align: center;
   }
   .contactDataTablet .adress{
-    font-size: 1.75rem;
+    font-size: calc(1rem + 1.5vh);
     min-height: 50%;
     font-weight: 300;
     color: black;
@@ -1220,7 +1220,7 @@ iframe{
   }
   .contactDataTablet .contactIcons #telephone a,
   .contactDataTablet .contactIcons #email a{
-    font-size: 1.2rem;
+    font-size: calc(0.5rem + 1.5vh);
     border-bottom: black 2px dashed;
     margin: 0;
   }
@@ -1441,11 +1441,11 @@ iframe{
 }
 @media (max-width: 650px) {
   #contactsMobile {
-    background-position-y: -100%;
-    min-height: 120vh;
+    background-position-y: -80%;
+    min-height: 150vh;
   }
   #contactsMobile div.graybox{
-    min-height: 120vh;
+    min-height: 150vh;
   }
   .contactDataMobile{
     display: flex;
@@ -1453,7 +1453,7 @@ iframe{
     position: absolute;
     flex-direction: column;
     align-items: center;
-    transform: translateY(105%);
+    top: 47%;
     z-index: 2;
     padding-left: 5vw;
     padding-right: 5vw;
@@ -1491,6 +1491,7 @@ iframe{
   .contactDataMobile .contactIcons{
     display: flex;
     flex-direction: column;
+    margin-top: 7%;
     width: 100%;
     justify-content: center;
   }
